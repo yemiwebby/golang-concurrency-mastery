@@ -1,6 +1,6 @@
-# 🚀 Projects to start mastering Concurrency in Golang
+# 🚀 Hands-on Projects to Master Concurrency in Golang
 
-Welcome to the **"Projects to Master Concurrency in Golang"** repository! This collection of projects is designed to help you **develop expertise in Go’s concurrency model** by working classic computer science challenges. This would be extended to include more projects as time goes on, especially real-world applications.
+Welcome to the **"Hands-on Projects to Master Concurrency in Golang"** repository! This collection of projects is designed to help you **develop expertise in Go’s concurrency model** by working through classic computer science challenges. The repository will be continuously updated with more projects, including real-world applications.
 
 Each project is **self-contained**, includes unit tests, and demonstrates different concurrency patterns such as **goroutines, channels, worker pools, mutexes, and rate limiting**.
 
@@ -33,9 +33,9 @@ cd golang-concurrency-mastery
 
 If you'd like to contribute:
 
-    - Fork the repo.
-    - Create a feature branch.
-    - Submit a PR.
+- Fork the repo.
+- Create a feature branch.
+- Submit a PR.
 
 ## ⭐ Support the Project
 
