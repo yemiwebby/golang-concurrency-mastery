@@ -1,0 +1,38 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Build artifacts
+/dist/
+/bin/
+/build/
+
+# Dependency directories (if using vendoring)
+vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Go modules cache (not needed in the repo)
+go.sum
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
