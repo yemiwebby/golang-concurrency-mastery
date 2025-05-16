@@ -170,6 +170,7 @@ func resolveURL(href, baseURL, domain, scheme string) (string, error) {
 		log.Println("[ERROR]: Could not parse base URL:", baseURL)
 		return "", err
 	}
+
 	resolvedLink := base.ResolveReference(link)
 
 	// Ensure we only crawl within the same domain
