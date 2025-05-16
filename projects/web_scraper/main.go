@@ -14,7 +14,7 @@ import (
 )
 
 type URLSet struct {
-	mu sync.RWMutex
+	mu   sync.RWMutex
 	urls map[string]struct{}
 }
 
@@ -48,8 +48,7 @@ func main() {
 	startCrawling(startingURL, domain, scheme, rPerSecond)
 }
 
-
-func parseURL(rURL string)(string, string, error) {
+func parseURL(rURL string) (string, string, error) {
 	u, err := url.ParseRequestURI(rURL)
 	if err != nil {
 		return "", "", err
@@ -86,7 +85,6 @@ func startCrawling(sURL, domain, scheme string, requestPerSecond int) {
 
 }
 
-
 func worker(urlQueue chan string, visited *URLSet, wg *sync.WaitGroup, domain, scheme string, rateLimiter <-chan time.Time, done chan struct{}) {
 
 	for {
@@ -107,8 +105,6 @@ func worker(urlQueue chan string, visited *URLSet, wg *sync.WaitGroup, domain, s
 func processURL(currentURL string, urlQueue chan string, visited *URLSet, wg *sync.WaitGroup, domain, scheme string) {
 	defer wg.Done()
 
-	log.Println("[INFO]: Visiting:", currentURL)
-
 	resp, err := fetchURL(currentURL)
 	if err != nil {
 		log.Printf("[ERROR]: Unable to fetch URL  %s: %s", currentURL, err)
@@ -125,7 +121,7 @@ func processURL(currentURL string, urlQueue chan string, visited *URLSet, wg *sy
 
 	links := extractLinks(doc, currentURL, domain, scheme)
 	log.Printf("[INFO] Found %d links on %s", len(links), currentURL)
-	
+
 	for _, link := range links {
 		log.Println("[DEBUG]: Extracted link:", link)
 		if visited.Add(link) {
@@ -154,7 +150,6 @@ func fetchURL(currentURL string) (*http.Response, error) {
 	}
 	return resp, nil
 }
-
 
 func resolveURL(href, baseURL, domain, scheme string) (string, error) {
 	href = strings.TrimSpace(href)
