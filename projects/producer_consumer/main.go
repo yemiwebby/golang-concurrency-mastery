@@ -19,21 +19,21 @@ Scenario:
 - **Concurrency Challenges**: Prevent race conditions, prioritize breaking news, and handle delays.
 
 THE SOLUTION
-  ✅  Producers (Journalists)
+    Producers (Journalists)
 	- Write an article every few seconds and place it in the printing queue.
 	- If the queue is full, they must wait before submitting another article.
-  ✅  Consumers (Printers)
+    Consumers (Printers)
     - Continuously take articles from the printing queue and print them.
 	- If the queue is empty, they must wait for new articles
-  ✅ Shared Resource (Queue)
+   Shared Resource (Queue)
     - Acts as a buffer between journalists and printers.
 	- Must have a fixed size to prevent infinite growth.
 	- Should support concurrent access safely.
-  ✅ Concurrency challenges to Solve
+   Concurrency challenges to Solve
     - Prevent race conditions when accessignt he queue.
 	- Ensure journalists don't overwrite existing articles.
 	- Ensure printers don't pick up the same article twice.
-  ✅  Optional Enhancements
+    Optional Enhancements
     - Introduce priorities (e.g, breaking news gets printed first)
 	- Add delays (some articles take longer to print).
 	- Simulate multiple printers & journalists
@@ -47,10 +47,10 @@ THE SOLUTION
 
 // Configurations
 const (
-	NumArticles = 10
-	MaxQueueSize = 5
-	NumPrinters = 2
-	ArticleWriteTime = 2 
+	NumArticles      = 10
+	MaxQueueSize     = 5
+	NumPrinters      = 2
+	ArticleWriteTime = 2
 )
 
 func newRandomGenerator() *rand.Rand {
@@ -64,7 +64,7 @@ func main() {
 
 	// Shared queue for articles
 	articleQueue := make(chan Article, MaxQueueSize)
-	priorityQueue := make(chan Article, 2) 
+	priorityQueue := make(chan Article, 2)
 
 	ctx, cancel := context.WithCancel(context.Background())
 

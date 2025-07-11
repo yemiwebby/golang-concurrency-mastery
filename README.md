@@ -1,10 +1,10 @@
-# 🚀 Hands-on Projects to Master Concurrency in Golang
+# Hands-on Projects to Master Concurrency in Golang
 
 Welcome to the **"Hands-on Projects to Master Concurrency in Golang"** repository! This collection of projects is designed to help you **develop expertise in Go’s concurrency model** by working through classic computer science challenges. The repository will be continuously updated with more projects, including real-world applications.
 
 ## Each project is **self-contained**, includes unit tests, and demonstrates different concurrency patterns such as **goroutines, channels, worker pools, mutexes, and rate limiting**.
 
-## 📌 **Project List**
+## **Project List**
 
 Each project is located inside the `projects/` directory and contains its own `README.md`, `go.mod`, and source code.
 
@@ -18,7 +18,7 @@ Each project is located inside the `projects/` directory and contains its own `R
 
 ---
 
-## 🛠 **Getting Started**
+## **Getting Started**
 
 ### **Clone the Repository**
 
@@ -27,7 +27,7 @@ git clone https://github.com/yourusername/golang-concurrency-mastery.git
 cd golang-concurrency-mastery
 ```
 
-## 📢 Contributing
+## Contributing
 
 If you'd like to contribute:
 
@@ -35,12 +35,12 @@ If you'd like to contribute:
 - Create a feature branch.
 - Submit a PR.
 
-## ⭐ Support the Project
+## Support the Project
 
 If you find this useful:
 
-- ✅ Give it a star ⭐ on GitHub
-- ✅ Follow for updates
-- ✅ Share on LinkedIn & tag me! [Yemiwebby](https://www.linkedin.com/in/yemiwebby)
+- Give it a star on GitHub
+- Follow for updates
+- Share on LinkedIn & tag me! [Yemiwebby](https://www.linkedin.com/in/yemiwebby)
 
-Happy coding! 🚀
+Happy coding!
